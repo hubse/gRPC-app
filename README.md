@@ -2,6 +2,22 @@
 
 This is a basic gRPC demo application implemented in Node.js. It demonstrates the core functionality of gRPC including defining a service, implementing a server, and creating a client to call the service.
 
+# Java RMI vs gRPC – Quick Differences
+
+| Feature                     | **Java RMI**                                         | **gRPC**                                              |
+|-----------------------------|------------------------------------------------------|--------------------------------------------------------|
+| **Language Support**        | Java only                                            | Multiple languages (Java, Go, Python, C++, etc.)       |
+| **Communication Protocol**  | Java-specific protocol (JRMP or IIOP)                | HTTP/2                                                 |
+| **Data Serialization**      | Java Serialization                                   | Protocol Buffers (protobuf)                            |
+| **Platform Independence**   | Limited (Java-only environments)                     | Fully cross-platform                                   |
+| **Performance**             | Slower due to Java serialization and RMI overhead    | High performance (compact protobuf + HTTP/2)           |
+| **Streaming Support**       | No built-in support                                  | Full support for client/server and bi-directional streaming |
+| **Interoperability**        | Poor (Java-to-Java only)                             | Excellent (multi-language, cross-platform)             |
+| **IDL (Interface Definition)** | Java interfaces                                     | .proto files                                            |
+| **Deployment Complexity**   | Simpler in Java-only environments                    | Requires tooling for protobuf, more setup              |
+| **Use Case**                | Legacy Java applications, distributed Java systems   | Modern microservices, polyglot systems                 |
+
+
 ## Files
 
 - `helloworld.proto`: Protocol buffer file defining the Greeter service and SayHello method.
